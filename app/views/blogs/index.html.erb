@@ -7,9 +7,9 @@
     <h2><%= blog.title %></h2>
     <p><%= blog.content %></p>
       <div class="blog-links">
-      <%= link_to '詳細を確認する', blog_path(blog.id), class: 'btn btn-info'%>
-      <%= link_to "ブログを編集する", edit_blog_path(blog.id), data: { confirm: '本当に編集していいですか？' }, class: 'btn btn-success'%>
-      <%= link_to 'ブログを削除する', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-warning'%>
+        <%= link_to '詳細を確認する', blog_path(blog.id), class: 'btn btn-info'%>
+        <%= link_to "ブログを編集する", edit_blog_path(blog.id), data: { confirm: '本当に編集していいですか？' }, class: 'btn btn-success'%>
+        <%= link_to 'ブログを削除する', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-warning'%>
       </div>
   </div>
   <% end %>

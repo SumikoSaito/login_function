@@ -1,5 +1,7 @@
-<%= form_with(model: @blog, local: true) do |form| %>
-<% if @blog.errors.any? %>
+<div class="container">
+<div class="screen">
+  <%= form_with(model: @blog, local: true) do |form| %>
+  <% if @blog.errors.any? %>
     <div id="error_explanation">
       <h2>入力内容に問題があります。</h2>
       <ul>
@@ -21,3 +23,5 @@
   </div>
 <%= form.submit %>
 <% end %>
+</div>
+</div>
