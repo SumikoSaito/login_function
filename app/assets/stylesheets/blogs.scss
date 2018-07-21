@@ -1,0 +1,39 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.blog-panel {
+  height: 200px;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+li{
+    list-style:none;
+}
+ul{
+    padding:0;
+}
+
+.header{
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.message li{
+    background-color:#C71585;
+    color:#fff;
+    padding:0;
+}
+
+.container {
+  padding: 0;
+  height: 100%;
+}
+
+.contents li{
+  background-color:#D8BFD8;
+  color:#fff;
+  padding:0;
+}

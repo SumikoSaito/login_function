@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Achieve</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <ul>
+      <li><%= link_to 'トップ画面', tops_path %></li>
+      <li><%= link_to 'ブログ一覧', blogs_path %></li>
+      <li><%= link_to 'ブログ作成ページ', new_blog_path %></li>
+    </ul>
+  </header>
+
+<%= yield %>
+
+  <footer>
+    <p>齋藤純子</p>
+    <p>© 2018 Copyright Sumiko Saito.</p>
+  </footer>
+  
+</body>
+</html>
