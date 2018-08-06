@@ -6,7 +6,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    # binding.pry
     @user = User.find(params[:id])
+    @favorite_blogs = @user.favorites
   end
 
   def create
