@@ -15,6 +15,7 @@ class BlogsController < ApplicationController
         @blog = Blog.new(blog_params)
         @blog.user_id = current_user.id
         if @blog.save
+        BlogMailer.blog_mail(@blog.user).deliver
         redirect_to new_blog_path, notice: "投稿しました！"
         else
         render 'new'
