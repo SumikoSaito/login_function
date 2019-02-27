@@ -3,7 +3,7 @@
 <%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
   <%= form.hidden_field :title %>
   <%= form.hidden_field :content %>
-  <%= image_tag(@feed.image.url) if @feed.image %>
+  <%= image_tag(@blog.image.url, class: "imageicon") if @blog.image %>
   <%= form.hidden_field :image_cache %>
 
   <p>タイトル:<%= @blog.title %></p>

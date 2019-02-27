@@ -4,8 +4,11 @@
 <p>内容: <%= @blog.content %></p>
 <p>
   <strong>Image:</strong>
-  <%= image_tag @blog.image.url %>
+  <%= image_tag @blog.image.url, class: "imageicon" %>
 </p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
 
 <% unless @blog.user_id == current_user.id %>
 

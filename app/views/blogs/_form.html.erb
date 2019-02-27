@@ -21,7 +21,7 @@
   </div>
   <div class="blog_title">
     <%= form.label :image %><br />
-    <%= image_tag(@blog.image.url) if @blog.image.present? %>
+    <%= image_tag(@blog.image.url, class: "imageicon") if @blog.image.present? %>
     <%= form.file_field :image %>
     <%= form.hidden_field :image_cache %>
   </div>

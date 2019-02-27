@@ -28,8 +28,26 @@ class UsersController < ApplicationController
       Digest::SHA256.hexdigest(token.to_s)
   end
 
+  def edit
+          @user = User.find(params[:id])
+      end
+
+      def update
+      @user = User.find(params[:id])
+          if @user.update(user_params)
+          redirect_to users_path, notice: "プロフィール写真を編集しました！"
+          else
+          render 'edit'
+          end
+      end
+
+      def confirm
+        @user = User.new(user_params)
+        render :new if @user.invalid?
+      end
+
   private
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :image, :image_cache)
   end
 end
