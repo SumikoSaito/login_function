@@ -2,6 +2,10 @@
 
 <p>タイトル: <%= @blog.title %></p>
 <p>内容: <%= @blog.content %></p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @blog.image.url %>
+</p>
 
 <% unless @blog.user_id == current_user.id %>
 
